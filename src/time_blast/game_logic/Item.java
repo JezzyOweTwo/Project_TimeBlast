@@ -11,6 +11,10 @@ public class Item{
         count++;
     	this.stats = stats;
     } 
+    Item(){
+        ID=count;
+        count++;	
+    }
     
     //constructor for special items
 //    Item(){

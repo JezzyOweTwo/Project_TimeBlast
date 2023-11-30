@@ -20,7 +20,10 @@ public class Inventory{
     
     //  
     public Inventory(Inventory inv) {
-    	this(new ArrayList<Item>(inv.getItems()),new ArrayList<Spell>(inv.getSpells()),new ArrayList<Attack>(inv.getAttacks()),inv.getGold());
+    	 gold = inv.getGold();
+    	 items = (inv.getItems()!=null)    ?  new ArrayList<Item>(inv.getItems()): 	  null;
+    	 spells = (inv.getSpells()!=null)  ?  new ArrayList<Spell>(inv.getSpells()):  null;
+    	 attacks = (inv.getAttacks()!=null)?  new ArrayList<Attack>(inv.getAttacks()):null;
     }
     
     public Spell getSpell(int index) {return spells.get(index);}

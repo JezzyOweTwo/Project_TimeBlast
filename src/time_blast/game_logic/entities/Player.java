@@ -1,31 +1,31 @@
-package time_blast.game_logic.entities;
-
-import java.util.ArrayList;
+package time_blast.game_logic.entities;	
 import java.util.HashMap;
 
 import time_blast.game_logic.Inventory;
 
 //player subclass
 public class Player extends Entity{	
+	private final StatName[] REJECTED_STATS = {StatName.EXPYIELD,StatName.AGGR};
+	
 	public Player(HashMap<StatName,Integer> stats,Inventory inv,String name){
 	 	super(inv,name);
-	 	final ArrayList<StatName> rejectedStats = new ArrayList<>();
-	 	rejectedStats.add(StatName.AGGR);
-	 	rejectedStats.add(StatName.EXPYIELD);
-	 	super.statLoader(stats,rejectedStats);
+	 	this.statLoader(stats);
+	 	this.removeStats(REJECTED_STATS);
 	}
 	
- // copy constructor
- public Player(Player player){
- 	super(player);
- 	removeStat(StatName.AGGR);
- 	removeStat(StatName.EXPYIELD);
- }
- public Player(){
- 	super();
- }
+	 // copy constructor
+	 public Player(Player player){
+	 	super(player);
+	 	this.statLoader(player.getStats());
+	 	this.removeStats(REJECTED_STATS);
+	 }
+	 
+	 public Player(){
+	 	super();
+	 }
 	
 	public void xpGain(int EXPGain){
+		if (!aboveZeroCheck(EXPGain)) return;
 		addStat(StatName.CUREXP,EXPGain);
 		while (this.getStat(StatName.CUREXP)>=this.getStat(StatName.MAXEXP)) {
 			levelUp();

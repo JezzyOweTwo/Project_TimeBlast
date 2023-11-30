@@ -15,3 +15,4 @@ public enum StatName 	{
 	CUREXP,
 	MAXEXP;
 }
+

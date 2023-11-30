@@ -28,45 +28,36 @@ public abstract class Entity  {
     static int Count=0;													  // Number of created entities
     private HashMap<StatName,Integer> stats= new HashMap<>();	  		  // hashmap of stats				
     
-    // main constructor 
-    Entity(HashMap<StatName,Integer> stats, Inventory inv,String name){
-    	this();
-    	final int DEFAULT_STAT_COUNT = 9;
-    	ArrayList<StatName> omittedStats = new ArrayList<>();
-    	StatName[] statname = StatName.values();
-    	
-    	for (int i =DEFAULT_STAT_COUNT;i<stats.size();i++) 
-    		omittedStats.add(statname[i]);
-    	
-    	statLoader(stats,omittedStats);
-    	this.inv = (inv);
-    	this.name = (name);
-    }
-    
     // default no args constructor
 	Entity(){
+		statLoader(new HashMap<StatName,Integer>());
     	Count++;
     	ID=Count;
     }
 	
 	Entity(Inventory inv,String name){
 		this();
-    	this.inv = (inv);
-    	this.name = (name);
+    	this.inv = new Inventory(inv);
+    	this.name = new String(name);
 	}
 	
 	// stat loader method
-	protected void statLoader(HashMap<StatName,Integer> stats,ArrayList<StatName> omitStats) {
-    	this.stats = new HashMap<StatName,Integer>(stats);
-		for(StatName statname:omitStats) {
-    		this.stats.remove(statname);
-    	}
+	protected void statLoader(HashMap<StatName,Integer> stats) {
+		StatName[] statnames = StatName.values();
+		ArrayList<StatName> addedStats = new ArrayList<>();
+		 for (StatName stat:statnames) {
+			if (stats.keySet().contains(stat)&&!addedStats.contains(stat)) {
+				this.stats.put(stat,stats.get(stat));
+				addedStats.add(stat);
+		 	}
+			else if (addedStats.contains(stat));	// exists so this condition doesn't trigger else condition
+			else this.stats.put(stat, 0);			// sets stat to 0 if it doesn't exist
+		}
 	}
     
     // copy constructor
     Entity(Entity en){
-    	this(new HashMap<StatName,Integer>(en.getStats()),
-    			new Inventory(en.getInv()),new String (en.getName()));
+    	this(new Inventory(en.getInv()),new String(en.getName()));
     }
     
     // validates if a given stat title is actually in the stat hashmap
@@ -78,37 +69,51 @@ public abstract class Entity  {
 		return false;
 	}
 	
+	// negative number checker
+	protected boolean aboveZeroCheck(float value) {
+		if (value>0) return true;
+		System.out.println("Error! "+value+" is a nonpositive number!");
+		return false;
+	}
+	
 	// adds to a stat 
 	public void addStat(StatName statName,int value){
-		if (validStatChecker(statName)) stats.put(statName,Math.max(stats.get(statName) + value, 0));
+		if (!validStatChecker(statName)||!aboveZeroCheck(value)) return;
+		stats.put(statName,Math.max(stats.get(statName) + value, 0));
 	}
 	
 	// subtracts from a stat
 	public void dropStat(StatName statName,int value) {
-		if (validStatChecker(statName)) stats.put(statName,Math.max(stats.get(statName) - value, 0));
+		if (!validStatChecker(statName)||!aboveZeroCheck(value)) return;
+		stats.put(statName,Math.max(stats.get(statName) - value, 0));
 	}
 	
 	// multiplies a stat
 	public void multiplyStat(StatName statName,float factor) {
-		if (validStatChecker(statName)) stats.put(statName,(int)(Math.max(stats.get(statName) * factor, 0)));
+		if (!validStatChecker(statName)||!aboveZeroCheck(factor)) return;
+		stats.put(statName,(int)(Math.max(stats.get(statName) * factor, 0)));
 	}
 	
     // setters and getters
     public HashMap<StatName,Integer> getStats() {return this.stats;}
     public int getStat(StatName key) { if (validStatChecker(key))return stats.get(key); return -1;}
-	public void setStats(HashMap<StatName,Integer> stats){
-		statLoader(stats,new ArrayList<StatName>());
-	}
+	public void setStats(HashMap<StatName,Integer> stats){statLoader(stats);}
 	public void setStat(StatName statName,int value) {
 		if (validStatChecker(statName)) stats.put(statName, value);
 	}
 	protected void removeStat(StatName statName) {
 		if (validStatChecker(statName)) stats.remove(statName);
 	}
+	protected void removeStats(StatName[] statNames) {
+	 	for (StatName s:statNames) {
+	 		this.removeStat(s);
+	 	}
+	}
+	
 	public Inventory getInv() {return inv;}
-	public void setInv(Inventory inv) {this.inv = inv;}
+	public void setInv(Inventory inv) {this.inv = new Inventory(inv);}
 	public String getName() {return name;}
-	public void setName(String name) {this.name = name;}
+	public void setName(String name) {this.name = new String(name);}
 	public int getID() {return ID;}
 	public static int getCount() {return Count;}
 	
