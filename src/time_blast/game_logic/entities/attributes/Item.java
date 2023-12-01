@@ -1,4 +1,4 @@
-package time_blast.game_logic;
+package time_blast.game_logic.entities.attributes;
 import java.util.*;
 
 public class Item{

@@ -1,12 +1,12 @@
-package time_blast.game_logic;
+package time_blast.utilities;
 import java.util.*;
 
 public interface Utilities {
-	static Scanner scan = new Scanner(System.in);  				// Create a Scanner object
+	static Scanner scan = new Scanner(System.in);  		// Create a Scanner object
 
 	default int response(String question) { 
 		ArrayList<String> options = optionArrayGenerator(question);
-		return response((String)options.get(0),options);
+		return response(options.remove(0),options);
 	}
 	
 	default <T> int response(String message,ArrayList<T> list) {
@@ -15,23 +15,11 @@ public interface Utilities {
 		for(T t : list) {
 			System.out.println(t.toString());
 		}
-		
-		// input handling
-		int accResponseCount = accResponsesCount(list);	// number of accepted responses
-		int input = Integer.parseInt(scan.nextLine());	// input from the user
-		if (input>accResponseCount||input<=0) {
-			System.out.println("Invalid input!\n");
-			return response(message,list);
-		}
-		
-		// closing thoughts
-		scan.close();									
-		return input;	
-	}
-	
-	// this helper method prints all possible options 
-	private <T> int accResponsesCount(ArrayList<T> list) {
-		return list.size();
+		int input=0;
+		do {
+			input = Integer.parseInt(scan.nextLine());	// input from the user	
+		} while(input<1||input>list.size());							
+		return input-1;	
 	}
 	
 	// this method returns an array of the original question and then all options
@@ -56,5 +44,4 @@ class ScrollingText {
 	
 	public static void setScrollSpeed(int speed){scrollSpeed = speed;}
 	public static int getScrollSpeed() {return scrollSpeed;}
-
 }

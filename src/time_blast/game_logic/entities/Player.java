@@ -1,7 +1,7 @@
 package time_blast.game_logic.entities;	
 import java.util.HashMap;
 
-import time_blast.game_logic.Inventory;
+import time_blast.game_logic.entities.attributes.Inventory;
 
 //player subclass
 public class Player extends Entity{	

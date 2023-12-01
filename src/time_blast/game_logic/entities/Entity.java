@@ -1,7 +1,7 @@
 package time_blast.game_logic.entities;
 import java.util.*;
 
-import time_blast.game_logic.Inventory;
+import time_blast.game_logic.entities.attributes.Inventory;
 
 /* Entity is an abstract parent class containing the following information about an entity:
  * 
@@ -119,11 +119,6 @@ public abstract class Entity  {
 	
 	@Override
 	public String toString() {
-		ArrayList<String> all = new ArrayList<>();
-		all.add(name);
-		all.add(stats.toString());
-		all.add(inv.toString());
-		all.add(Integer.toString(ID));
-		return all.toString();
+		return this.getName()+", ID: "+this.getID();
 	}   
 }	

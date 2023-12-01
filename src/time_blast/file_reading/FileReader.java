@@ -1,28 +1,36 @@
 package time_blast.file_reading;
-import java.io.*;  
+import java.io.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.*;
 
-// this method is responsible for reading dialogue files. 
+// You're probably wondering why this isn't a static class right now.
+// The short answer is that I plan on switching to UI based design.
+// using an interface makes it easier to tell which classes use this
+// soon to be deprecated method. 
+// If I decide to keep this class, i'll change it.
+// also ngl interfaces with method bodies is just generally kinda cool
 
 public interface FileReader {
 	
 	// this method returns a hashmap of all entries in the csv file.
-	default HashMap<String,ArrayList<String>> readCSV(String filename) throws FileNotFoundException{
-		Scanner scan = new Scanner(new File(filename));  						// Create a Scanner object
+	default HashMap<String,ArrayList<String>> readCSV(String filename) {
+		String defaultPath = Paths.get("").toAbsolutePath().toString();
+		filename = defaultPath+filename;
+		Scanner scan;  															// Create a Scanner object
 		HashMap<String,ArrayList<String>> dialogueOptions = new HashMap<>();	// String key hashmap of all dialogue options
 		ArrayList<String> categoryArray = new ArrayList<>();					// an array of a single category of dialogue
 		
-		while (scan.hasNext()){
-			String line = scan.nextLine();
-			
-			// Removes all trailing commas from a line. This code is nasty. 
-			// I'm like 1000% sure there's a better way to do this.
-			String lastChar =line.substring(line.length()-2, line.length()-1);
-			while(lastChar.equals(",")) {
-				line = line.substring(0,line.length()-2);
-			}	// this code makes me suicidal.
+		try {
+			File file = new File(filename);
+			scan = new Scanner(file);  							// Create a Scanner object
+		} catch(FileNotFoundException e) {
+			System.out.println("File not found!");
+			return dialogueOptions;
+		}
 		
-			categoryArray = new ArrayList<>(Arrays.asList(line.split(",")));
+		while (scan.hasNext()){
+			categoryArray = new ArrayList<>(Arrays.asList(scan.nextLine().split(",")));
 			dialogueOptions.put(categoryArray.remove(0).trim(), categoryArray);
 		}
 		scan.close();
@@ -31,11 +39,6 @@ public interface FileReader {
 	
 	default <T> T readJSON(String fileName) {
 		T t=null;
-		
-		
-		
-		
-		
 		return t;
 	}
 	

@@ -1,14 +1,15 @@
-package time_blast.game_logic;
-
+package time_blast.game_logic.Battle;
 import time_blast.game_logic.entities.Entity;
 import time_blast.game_logic.entities.StatName;
+import time_blast.game_logic.entities.attributes.Item;
+import time_blast.game_logic.entities.attributes.Spell;
 
 //this class contains all actions available to the player on the battle menu
 public abstract class Action implements Comparable<Action>{
 	private Entity source;
 	private Entity target;
 	
-	Action(Entity source,Entity target){
+	public Action(Entity source,Entity target){
 		this.source=source;
 		this.target=target;
 	}
@@ -25,7 +26,7 @@ public abstract class Action implements Comparable<Action>{
 
 class performDefend extends Action{
 	
-	performDefend(Entity source,Entity target){
+	public performDefend(Entity source,Entity target){
 		super(source,target);
 	}
 	
@@ -38,7 +39,7 @@ class performDefend extends Action{
 
 class performAttack extends Action{
 	
-	performAttack(Entity source,Entity target){
+	public performAttack(Entity source,Entity target){
 		super(source,target);
 	}
 	
@@ -51,7 +52,7 @@ class performAttack extends Action{
 class performSpell extends Action{
 	private Spell spell;
 	
-	performSpell(Entity source,Entity target,Spell spell){
+	public performSpell(Entity source,Entity target,Spell spell){
 		super(source,target);
 		this.spell=spell;
 	}
@@ -66,7 +67,7 @@ class performSpell extends Action{
 class performItem extends Action{
 	private Item item;
 	
-	performItem(Entity source,Entity target,Item item){
+	public performItem(Entity source,Entity target,Item item){
 		super(source,target);
 		this.item=item;
 	}
@@ -79,7 +80,7 @@ class performItem extends Action{
 
 class performRun extends Action{
 
-	performRun(Entity source,Entity target){
+	public performRun(Entity source,Entity target){
 		super(source,target);
 	}
 	

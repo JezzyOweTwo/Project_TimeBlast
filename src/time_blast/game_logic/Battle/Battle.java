@@ -1,26 +1,26 @@
-package time_blast.game_logic;
-import java.io.FileNotFoundException;
+package time_blast.game_logic.Battle;
 import java.util.*;
-
 import time_blast.file_reading.FileReader;
 import time_blast.game_logic.entities.*;
+import time_blast.utilities.Utilities;
 
 // This class is responsible for the battling in the game.
 public class Battle implements Utilities,FileReader {
 	
 	private Player player;
 	private ArrayList<Enemy> enemies;
-	private HashMap<String,ArrayList<String>> dialogue;
+	private HashMap<String,ArrayList<String>> dialogue = new HashMap<>();
 	
-	Battle(Player player, ArrayList<Enemy> enemies) {
-		this.player=player;
-		this.enemies=enemies;
-		try {
-			dialogue = readCSV("BattleDialogue.csv");
-		} catch (FileNotFoundException e) {
-			System.out.println("File cannot be found!");
-		}	
-	}	
+	public Battle(Player player, ArrayList<Enemy> enemies){
+		this.player=new Player(player);
+		this.enemies=new ArrayList<Enemy>(enemies);
+		dialogue = readCSV("\\src\\time_blast\\game_logic\\Battle\\BattleDialogue.csv");
+	}
+	
+	// getters (there are no setters for battle)
+	public Player getPlayer() {return player;}
+	public ArrayList<Enemy> getEnemies(){return enemies;}
+	public HashMap<String,ArrayList<String>> getDialogue(){return dialogue;}
 	
 	// Main returns 1 if player wins, 0 tie, -1 enemy win
 	public int runBattle() {
@@ -34,9 +34,10 @@ public class Battle implements Utilities,FileReader {
 			
 			// Player Died //
 			else if (player.getStat(StatName.CURHP)<=0) {return -1;}
-	
+			
 			battle();
 		}
+		
 	}
 	
 	// -------------------------------- main battle method ----------------------------------------------------- //
@@ -84,7 +85,7 @@ public class Battle implements Utilities,FileReader {
 		Action playerAction = null;
 		
 		switch(playerchoice) {
-		
+			
 			// attack option
 			case 1:
 				playerchoice = response(dialogue.get("Targeters").get(0),enemies);

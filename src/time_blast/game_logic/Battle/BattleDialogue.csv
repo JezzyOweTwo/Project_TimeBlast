@@ -1,0 +1,6 @@
+Battle ,,,
+Menu,What will you do?\n1.Attack\n2.Defend\n3.Magic\n4.Item\n5.Run,,
+Targeters,Who will you Target?,Whch Item will you use?,Which spell will you cast?
+Damage,The attack missed!,You landed a Critical Hit!,
+Run,You failed to escape!,You escaped sucessfully!,
+Spell,The spell counter was ineffective!,The spell was sucessfully countered!,

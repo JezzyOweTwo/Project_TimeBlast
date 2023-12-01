@@ -1,7 +1,7 @@
 package time_blast.game_logic.entities;
 import java.util.HashMap;
 
-import time_blast.game_logic.Inventory;
+import time_blast.game_logic.entities.attributes.Inventory;
 
 //enemy subclass
 public class Enemy extends Entity{	
@@ -11,5 +11,8 @@ public class Enemy extends Entity{
 	 	super(inv,name);
 	 	this.statLoader(stats);
 	 	this.removeStats(REJECTED_STATS);
-	}		
+	}	
+	public Enemy() {
+		super();
+	}
 }

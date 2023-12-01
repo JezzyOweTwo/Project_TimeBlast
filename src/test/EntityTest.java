@@ -4,13 +4,14 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.*;
 import org.junit.jupiter.api.Test;
-import time_blast.game_logic.Inventory;
+
 import time_blast.game_logic.entities.Enemy;
 import time_blast.game_logic.entities.Player;
 import time_blast.game_logic.entities.StatName;
+import time_blast.game_logic.entities.attributes.Inventory;
 
 class EntityTest {
-	public Player createPlayerWithStats() {
+	public static Player createPlayerWithStats() {
 		HashMap<StatName,Integer> playerStats = new HashMap<>();
 		Integer[] st = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18};
 		ArrayList<Integer> stats = new ArrayList<>(Arrays.asList(st));
@@ -23,7 +24,7 @@ class EntityTest {
 		}
 		return new Player(playerStats,inv,name);
 	}
-	public Enemy createEnemyWithStats() {
+	public static Enemy createEnemyWithStats() {
 		HashMap<StatName,Integer> EnemyStats = new HashMap<>();
 		Integer[] st = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18};
 		ArrayList<Integer> stats = new ArrayList<>(Arrays.asList(st));
@@ -87,8 +88,7 @@ class EntityTest {
 		Inventory inv = new Inventory();
 		String name = "Jamal";
 		Player player1 = new Player(playerStats,inv,name);
-		Player player2 = new Player(player1);
-		
+		Player player2 = new Player(player1);	
 		boolean actual = player1.getName() == player2.getName(); 
 		boolean expected = false;
 		assertEquals(actual,expected,"Copy constructor is not deep copying!");
