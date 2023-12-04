@@ -27,6 +27,7 @@ public interface Utilities {
 		ArrayList<String> options = new ArrayList<>(Arrays.asList(question.split("\n")));
 		return options;
 	}
+	
 }	
 
 class ScrollingText {

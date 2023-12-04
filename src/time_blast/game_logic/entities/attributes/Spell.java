@@ -1,77 +1,65 @@
 package time_blast.game_logic.entities.attributes;
-
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Spell{
 	
-	private HashMap<String,Integer> stats = new HashMap<String,Integer>();
-    private final String element;
-    private final boolean isSplash;
-    private boolean special;
-    static int SpellNumber=0;
+	private HashMap<SpellStatName,Integer> stats = new HashMap<>();
+    private SpellElement element;
+    private boolean isSplash;
+    static int count=0;
     final private int ID;
-    final private String name;
-
+    private String name;
+    public static final HashMap<SpellElement,SpellElement> ELEMENT_CHART = elementChartGenerator();
     
-    Spell(HashMap<String,Integer> stats,String name,String element,boolean isSplash){
-    	this(stats.values().toArray(new Integer[stats.size()]),name,element,isSplash);
-    }
-    
-    Spell(Integer[] stats,String name,String element,boolean isSplash){
-    	String[] titles = {"BaseDmg","ManaCost"};
-    	int i=0;
-    	for(String t:titles) {
-    		this.stats.put(t,stats[i]);
-    	}
-    	
+    public Spell(HashMap<SpellStatName,Integer> stats,String name,SpellElement element,boolean isSplash){
+    	for (SpellStatName s:SpellStatName.values()) {
+    		if (stats.keySet().contains(s))this.stats.put(s,stats.get(s));
+    		else this.stats.put(s, 0);
+    	}	
     	this.isSplash = isSplash;
-    	this.name=name;
-    	this.special=false;
+    	this.name=new String(name);
     	this.element = element;
-        SpellNumber++;
-        ID=SpellNumber;
+        count++;
+        ID=count;
     }
     
     // copy constructor
-    Spell(Spell spell){
-    	this(new HashMap<String,Integer>(spell.getStats()),new String(spell.getName()),new String(spell.getElement()),spell.getIsSplash());
-    }
+	public Spell(Spell spell){
+		this(new HashMap<SpellStatName,Integer>(spell.getStats()),new String(spell.getName()),spell.getElement(),spell.getIsSplash());
+	}
+  
+	// empty spell constructor
+	public Spell(){
+      count++;
+      ID=count;
+	}
+	
+	// generates the element effectiveness chart 
+	private static HashMap<SpellElement,SpellElement> elementChartGenerator(){
+		HashMap<SpellElement,SpellElement> elementChart = new HashMap<>();
+		SpellElement[] spellElements = SpellElement.values();
+		int spellElementCount = spellElements.length;
+		for (int j =1;j<=spellElementCount;j++) 
+			elementChart.put(spellElements[(j-1)%spellElementCount], spellElements[(j)%spellElementCount]);
+		return elementChart;
+	}
     
+	// getters
     public boolean getIsSplash() {return isSplash;}
-    public static int getSpellNumber() {return SpellNumber;}
-    public String getElement() {return element;}
-    public HashMap<String,Integer> getStats() {return stats;}
-	public boolean getSpecial() {return special;}
+    public static int getSpellNumber() {return count;}
+    public SpellElement getElement() {return element;}
+    public HashMap<SpellElement,SpellElement> getElementChart(){return ELEMENT_CHART;}
+    public HashMap<SpellStatName,Integer> getStats() {return stats;}
 	public int getID() {return ID;}
 	public String getName() {return name;}
-
-	// special spell constructor
-    Spell(){
-    	element="";
-    	stats = new HashMap<>();
-        SpellNumber++;
-        special=false;
-        ID=SpellNumber;
-        name = "Void";
-        isSplash = false;
-    }
     
+	// setters
+	public void setElement(SpellElement spellelement) {this.element=spellelement;}
+	
+	
     @Override
     public String toString() {
-    	String all = "";
-    	all+=stats.toString();
-    	all+=Boolean.toString(special);	
-    	return all;
+    	return name;
     }
     
-    public static String[] nameList(Spell[] spells) {
-		String[] names = new String[spells.length];
-		int i=0;
-		for (Spell e:spells) {
-			names[i] = e.getName();
-			i++;
-		}
-		return names;
-    }
 }
