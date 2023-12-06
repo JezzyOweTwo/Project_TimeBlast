@@ -13,7 +13,7 @@ import time_blast.game_logic.entities.attributes.Inventory;
 class EntityTest {
 	public static Player createPlayerWithStats() {
 		HashMap<StatName,Integer> playerStats = new HashMap<>();
-		Integer[] st = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18};
+		Integer[] st = {20,20,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18};
 		ArrayList<Integer> stats = new ArrayList<>(Arrays.asList(st));
 		Inventory inv = new Inventory();
 		String name = "Jamal";

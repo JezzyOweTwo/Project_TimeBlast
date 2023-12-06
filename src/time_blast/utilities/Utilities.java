@@ -12,19 +12,21 @@ public interface Utilities {
 	default <T> int response(String message,ArrayList<T> list) {
 		// print message and options
 		System.out.println(message);
+		int i=1;
 		for(T t : list) {
-			System.out.println(t.toString());
+			System.out.println(i+"."+t.toString());
+			i++;
 		}
 		int input=0;
 		do {
 			input = Integer.parseInt(scan.nextLine());	// input from the user	
 		} while(input<1||input>list.size());							
-		return input-1;	
+		return input;	
 	}
 	
 	// this method returns an array of the original question and then all options
 	private ArrayList<String> optionArrayGenerator(String question){
-		ArrayList<String> options = new ArrayList<>(Arrays.asList(question.split("\n")));
+		ArrayList<String> options = new ArrayList<>(Arrays.asList(question.split("@")));
 		return options;
 	}
 	

@@ -1,5 +1,5 @@
 Battle ,,,
-Menu,What will you do?\n1.Attack\n2.Defend\n3.Magic\n4.Item\n5.Run,,
+Menu,What will you do?@Attack@Defend@Magic@Item@Run,,
 Targeters,Who will you Target?,Whch Item will you use?,Which spell will you cast?
 Damage,The attack missed!,You landed a Critical Hit!,
 Run,You failed to escape!,You escaped sucessfully!,

@@ -41,8 +41,8 @@ class BattleTest implements FileReader{
 		Player player = EntityTest.createPlayerWithStats();
 		Battle battle = new Battle(player,enemyarray);
 		boolean expected = true;
-		boolean actual = player != battle.getPlayer();
-		assertEquals(actual,expected,"Player object was not deeply copied");
+		boolean actual = player == battle.getPlayer();
+		assertEquals(actual,expected,"Player object was not shallowly copied!");
 	}
 	@Test
 	void Constructor_test_3() {
@@ -50,15 +50,16 @@ class BattleTest implements FileReader{
 		Player player = EntityTest.createPlayerWithStats();
 		Battle battle = new Battle(player,enemyarray);
 		boolean expected = true;
-		boolean actual = enemyarray != battle.getEnemies();
-		assertEquals(actual,expected,"Enemy object was not deeply copied");
+		boolean actual = enemyarray == battle.getEnemies();
+		assertEquals(actual,expected,"Enemy object was not shallowly copied!");
 	}
 	@Test
 	void Constructor_test_4() {
 		ArrayList<Enemy> enemyarray = createEnemyArrayWithStats();
 		Player player = EntityTest.createPlayerWithStats();
 		Battle battle = new Battle(player,enemyarray);
-		HashMap<String,ArrayList<String>> dialogue = readCSV("BattleDialogue.csv");
+		HashMap<String,ArrayList<String>> dialogue =
+				readCSV("\\src\\time_blast\\game_logic\\Battle\\BattleDialogue.csv");
 		boolean expected = true;
 		boolean actual = dialogue != battle.getDialogue();
 		assertEquals(actual,expected,"Dialogue object was not deeply copied");

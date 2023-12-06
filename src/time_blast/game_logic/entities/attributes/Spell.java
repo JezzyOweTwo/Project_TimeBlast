@@ -50,12 +50,19 @@ public class Spell{
     public SpellElement getElement() {return element;}
     public HashMap<SpellElement,SpellElement> getElementChart(){return ELEMENT_CHART;}
     public HashMap<SpellStatName,Integer> getStats() {return stats;}
+    public int getStat(SpellStatName statName) {
+    	if (stats.containsKey(statName)) 
+    		return stats.get(statName);
+    	else {
+    		System.out.println("Stat name is not contained in this stat array!");
+    		return -1;
+    	}
+    }
 	public int getID() {return ID;}
 	public String getName() {return name;}
     
 	// setters
 	public void setElement(SpellElement spellelement) {this.element=spellelement;}
-	
 	
     @Override
     public String toString() {

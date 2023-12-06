@@ -11,21 +11,18 @@ public class Item{
         count++;
     	this.stats = stats;
     } 
+    
     Item(){
         ID=count;
         count++;	
     }
-    
-    //constructor for special items
-//    Item(){
-//        ID=count;
-//    }
     
     //Copy constructor for item
     Item(Item item){
     	 this(new HashMap<String,Integer>(item.getStats()));
     }
     
+    // getters
     public HashMap<String,Integer> getStats(){return stats;}
     public void setStats(HashMap<String,Integer> stats) {this.stats=stats;}
     public static int getCount() {return count;}

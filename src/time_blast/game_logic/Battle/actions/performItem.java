@@ -10,6 +10,7 @@ public class performItem extends Action{
 		super(source,target);
 		this.item=item;
 	}
+	public Item getItem() {return item;}
 	
 	@Override
 	public void execute() {

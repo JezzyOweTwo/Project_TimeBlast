@@ -1,26 +1,26 @@
 package time_blast.game_logic.Battle.actions;
-import java.util.HashMap;
-
 import time_blast.game_logic.entities.Entity;
 import time_blast.game_logic.entities.StatName;
-import time_blast.game_logic.entities.attributes.Item;
-import time_blast.game_logic.entities.attributes.Spell;
-import time_blast.game_logic.entities.attributes.SpellElement;
 
 //this class contains all actions available to the player on the battle menu
 public abstract class Action implements Comparable<Action>{
-	private Entity source;
-	private Entity target;
+	protected Entity source;
+	protected Entity target;
 	
 	public Action(Entity source,Entity target){
-		this.source=source;
+		// note that these objects are intentionally not deep copied.
+		this.source=source;	
 		this.target=target;
 	}
 	
+	// method that actually performs the action.
 	public abstract void execute();
+	
+	// getters
 	public Entity getSource() {return source;}
 	public Entity getTarget() {return target;}
 	
+	// allows actions to be compared based on the speed on each entity performing the action.
 	@Override
 	public int compareTo(Action a) {
 		return this.getSource().getStat(StatName.SPEED)-a.getSource().getStat(StatName.SPEED);

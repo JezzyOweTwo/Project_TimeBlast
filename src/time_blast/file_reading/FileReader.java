@@ -14,18 +14,18 @@ import java.util.*;
 public interface FileReader {
 	
 	// this method returns a hashmap of all entries in the csv file.
-	default HashMap<String,ArrayList<String>> readCSV(String filename) {
+	default HashMap<String,ArrayList<String>> readCSV(String filepath) {
 		String defaultPath = Paths.get("").toAbsolutePath().toString();
-		filename = defaultPath+filename;
+		String fullFilePath = defaultPath+filepath;
 		Scanner scan;  															// Create a Scanner object
 		HashMap<String,ArrayList<String>> dialogueOptions = new HashMap<>();	// String key hashmap of all dialogue options
 		ArrayList<String> categoryArray = new ArrayList<>();					// an array of a single category of dialogue
 		
 		try {
-			File file = new File(filename);
+			File file = new File(fullFilePath);
 			scan = new Scanner(file);  							// Create a Scanner object
 		} catch(FileNotFoundException e) {
-			System.out.println("File not found!");
+			System.out.println("File "+fullFilePath+" cannot be located!");
 			return dialogueOptions;
 		}
 		

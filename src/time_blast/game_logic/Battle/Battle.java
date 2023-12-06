@@ -15,11 +15,16 @@ public class Battle implements Utilities,FileReader {
 	
 	private Player player;
 	private ArrayList<Enemy> enemies;
-	private HashMap<String,ArrayList<String>> dialogue = new HashMap<>();
+	private ArrayList<Entity> combattants;
+	private HashMap<String,ArrayList<String>> dialogue;
 	
 	public Battle(Player player, ArrayList<Enemy> enemies){
-		this.player=new Player(player);
-		this.enemies=new ArrayList<Enemy>(enemies);
+		
+		// note that this constructor intentionally avoids deep copying
+		this.player=player;
+		this.enemies=enemies;
+		combattants = new ArrayList<>(enemies);
+		combattants.add(player);
 		dialogue = readCSV("\\src\\time_blast\\game_logic\\Battle\\BattleDialogue.csv");
 	}
 	
@@ -49,25 +54,38 @@ public class Battle implements Utilities,FileReader {
 	// -------------------------------- main battle method ----------------------------------------------------- //
 
 	private void battle(){
-		Action playerAction = playerInputHandler();
 		List<Action> actions = new ArrayList<>();
-		for (Enemy e :enemies) {
+		for (Enemy e :enemies) 
 			actions.add(enemyInputHandler(e));	
-		}
-		actions.add(playerAction);
+		actions.add(playerInputHandler());
 		ActionPerformer(actions);
 	}	// battle method
 	
 	// ------------------------------------------ helper methods ------------------------------------------------------//
 	
-	// returns true if any enemy in the list is still alive, otherwise false.
-	boolean areAlive() {
+	// checks if any enemies have been killed and rewards player xp for any killed enemies
+	private boolean areAlive() {
+		boolean areAlive = false;
+		ArrayList<Entity> removalList = new ArrayList<>();
 		for(Enemy e:enemies) {
-			if(e.getStat(StatName.CURHP)>0) return true; 
+			if(e.getStat(StatName.CURHP)<=0) {
+				player.xpGain(e.getStat(StatName.EXPYIELD));
+				removalList.add(e);
+			}
+			else areAlive=true;
 		}	
-		return false;
-	}   
-
+		combattants.removeAll(removalList);
+		enemies.removeAll(removalList);
+		return areAlive;
+	}  
+	private Enemy fastestEnemy() {
+		Enemy tempEnemy = null;
+		int fastestSpeed=0;
+		for (Enemy e:enemies){
+			if (e.getStat(StatName.SPEED)>fastestSpeed) tempEnemy=e;
+		}
+		return tempEnemy;
+	}
 
 	// this method is responsible for performing a list of actions and updating and necessary UI elements
 	private void ActionPerformer(List<? extends Action> actions) {
@@ -75,7 +93,33 @@ public class Battle implements Utilities,FileReader {
 		Collections.reverse(actions);	// reverses the order from fastest to slowest
 		
 		for(Action a:actions) {
+			if (a.getSource().getStat(StatName.CURHP)<=0||
+					!combattants.contains(a.getSource())) continue;
 			a.execute();
+			
+			// player has run away
+			if (!combattants.contains(player)) {
+				System.out.println("The player has run away");
+				return;
+			}
+			
+			// player has died
+			else if	(player.getStat(StatName.CURHP)<=0) {
+				System.out.println("The player has died!");
+				return;
+			}
+			
+			// no enemies left alive
+			else if (!areAlive()) {
+				System.out.println("All enemies have died!");
+				return;
+			}
+				
+			// last enemy ran away
+			else if (combattants.contains(player)&&combattants.size()==1) {
+				System.out.println("The final enemy has escaped!");
+				return;
+			}
 		}
 	}
 	
@@ -94,36 +138,45 @@ public class Battle implements Utilities,FileReader {
 			
 			// attack option
 			case 1:
-				playerchoice = response(dialogue.get("Targeters").get(0),enemies);
-				playerAction = new performAttack(player,enemies.get(playerchoice));
+				if (enemies.size()>1) playerchoice = response(dialogue.get("Targeters").get(0),enemies);
+				else playerchoice=1;
+				playerAction = new performAttack(player,enemies.get(playerchoice-1));
 				break;
 			
 			// defend option
 			case 2:
-				playerAction = new performDefend(player,enemies.get(playerchoice));
+				playerAction = new performDefend(player,enemies.get(playerchoice-1));
 				break;
 			
 			// spell option
 			case 3:
+				if (player.getInv().getSpells()==null) break;
 				playerchoice = response(dialogue.get("Targeters").get(2),player.getInv().getSpells());
 				playerchoice2 = response(dialogue.get("Targeters").get(0),enemies);
-				playerAction = new performSpell(player,enemies.get(playerchoice),player.getInv().getSpell(playerchoice2-1));
+				playerAction = new performSpell(player,enemies.get(playerchoice-1),player.getInv().getSpell(playerchoice2-1));
 				break;
 			
 			// item option
 			case 4:
+				if (player.getInv().getItems()==null) break;
 				playerchoice = response(dialogue.get("Targeters").get(1),player.getInv().getItems());
 				playerchoice2 = response(dialogue.get("Targeters").get(0),enemies);
-				playerAction = new performItem(player,enemies.get(playerchoice),player.getInv().getItem(playerchoice2-1));
+				playerAction = new performItem(player,enemies.get(playerchoice-1),player.getInv().getItem(playerchoice2-1));
 				break;
 			
 			// run option
 			case 5:
-				playerAction = new performRun(player,enemies.get(playerchoice));
+				playerAction = new performRun(player,fastestEnemy(),combattants);
+				break;
+				
+			default:
+				break;
 		}
-		
 		// error handling
-		if (playerAction==null) System.out.println("Player action was not added successfully!");
+		if (playerAction==null) {
+			System.out.println("ERROR! Player action was added unsuccessfully!");
+			return playerInputHandler();
+		}
 		return playerAction;
 	}		
 }
