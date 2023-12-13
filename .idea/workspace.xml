@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ca12709b-e71d-4c88-b0c1-aa559bf795c1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit5_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Project_TimeBlast.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/time_blast/file_reading/FileReadableTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/time_blast/file_reading/FileReaderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/time_blast/game_logic/actions/ActionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/time_blast/game_logic/battle/BattleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/time_blast/game_logic/entities/EntityTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/time_blast/game_logic/entities/attributes/SpellTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/time_blast/utilities/UtilitiesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/test/ActionTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/test/BattleTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/test/EntityTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/test/FileReaderTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/test/FileReaderTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/test/SpellTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/test/UtilitiesTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/file_reading/CSVReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/file_reading/CSVReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/file_reading/Dialogue.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/file_reading/Dialogue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/file_reading/FileReadable.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/file_reading/FileReadable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/file_reading/FileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/file_reading/FileReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/Battle/Battle.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/Battle/Battle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/Battle/actions/Action.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/Battle/actions/performAttack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/Battle/actions/performDefend.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/Battle/actions/performItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/Battle/actions/performRun.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/Battle/actions/performSpell.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/Battle/actions/performSpellCounter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/Entity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/StatName.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/StatName.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/Attack.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/Attack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/Inventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/Inventory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/RarityLevels.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/RarityLevels.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/Spell.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/Spell.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/SpellElement.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/SpellElement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/SpellStatName.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/SpellStatName.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/graphics/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/graphics/GamePanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/graphics/GameWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/graphics/GameWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/graphics/assets/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/graphics/assets/GUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/shop/Shop.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/shop/Shop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/utilities/ScrollingText.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/utilities/ScrollingText.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/utilities/Utilities.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/utilities/Utilities.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/ActionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/BattleTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/EntityTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/FileReaderTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/SpellTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/UtilitiesTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/time_blast/file_reading/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/file_reading/CSVReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/Battle/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/battle/Battle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/Battle/BattleDialogue.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/battle/BattleDialogue.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/Battle/actions/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/actions/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/Battle/actions/performAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/actions/performAttack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/Battle/actions/performDefend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/actions/performDefend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/Battle/actions/performItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/actions/performItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/Battle/actions/performRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/actions/performRun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/Battle/actions/performSpell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/actions/performSpell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/Battle/actions/performSpellCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/actions/performSpellCounter.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2ZTjrpeR5LoEWEKyW3yoirB3Iwj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Program Files/Java/junit5-main",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\fjezi\IdeaProjects\Project_TimeBlast\src\time_blast\game_logic\battle" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="time_blast" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="time_blast.utilities" />
+      <recent name="time_blast.game_logic.entities.attributes" />
+      <recent name="time_blast.game_logic.entities" />
+      <recent name="time_blast.game_logic.actions" />
+      <recent name="time_blast.game_logic.battle" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ca12709b-e71d-4c88-b0c1-aa559bf795c1" name="Changes" comment="" />
+      <created>1702453201561</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702453201561</updated>
+    </task>
+    <servers />
+  </component>
+</project>
