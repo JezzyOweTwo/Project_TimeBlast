@@ -34,7 +34,6 @@ public interface Utilities {
 
 class ScrollingText {
 	private static int scrollSpeed=20;
-	
 	public static void scroll(String title){
 		System.out.print("\n");
 		for (int i=0;i<title.length();i++) {
@@ -43,8 +42,7 @@ class ScrollingText {
 	        catch(InterruptedException e){System.out.println(e);}	
 		}
 		System.out.print("\n");
-	}
-	
+	}	
 	public static void setScrollSpeed(int speed){scrollSpeed = speed;}
 	public static int getScrollSpeed() {return scrollSpeed;}
 }

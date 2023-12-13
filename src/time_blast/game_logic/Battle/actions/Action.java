@@ -16,6 +16,12 @@ public abstract class Action implements Comparable<Action>{
 	// method that actually performs the action.
 	public abstract void execute();
 	
+	// checks if source and target are both still alive.
+	protected boolean areAlive() {
+		if (source.getStat(StatName.CURHP)<=0||target.getStat(StatName.CURHP)<=0) return false;
+		else return true;
+	}
+	
 	// getters
 	public Entity getSource() {return source;}
 	public Entity getTarget() {return target;}

@@ -14,6 +14,7 @@ public class performItem extends Action{
 	
 	@Override
 	public void execute() {
+		if (!areAlive()) return;
 		// TODO Auto-generated method stub
 	}
 }

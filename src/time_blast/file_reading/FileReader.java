@@ -1,64 +1,41 @@
 package time_blast.file_reading;
 import java.io.*;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 
-// You're probably wondering why this isn't a static class right now.
-// The short answer is that I plan on switching to UI based design.
-// using an interface makes it easier to tell which classes use this
-// soon to be deprecated method. 
-// If I decide to keep this class, i'll change it.
-// also ngl interfaces with method bodies is just generally kinda cool
-
-public interface FileReader {
+public abstract class FileReader<T> {
+	protected Scanner scan;  														// Create a Scanner object
+	protected File file;
+	protected String filePath;
 	
-	// this method returns a hashmap of all entries in the csv file.
-	default HashMap<String,ArrayList<String>> readCSV(String filepath) {
-		String defaultPath = Paths.get("").toAbsolutePath().toString();
-		String fullFilePath = defaultPath+filepath;
-		Scanner scan;  															// Create a Scanner object
-		HashMap<String,ArrayList<String>> dialogueOptions = new HashMap<>();	// String key hashmap of all dialogue options
-		ArrayList<String> categoryArray = new ArrayList<>();					// an array of a single category of dialogue
-		
+	FileReader(String filepath){
+		this.filePath = Paths.get("").toAbsolutePath().toString()+filepath;					
 		try {
-			File file = new File(fullFilePath);
-			scan = new Scanner(file);  							// Create a Scanner object
-		} catch(FileNotFoundException e) {
-			System.out.println("File "+fullFilePath+" cannot be located!");
-			return dialogueOptions;
-		}
-		
-		while (scan.hasNext()){
-			categoryArray = new ArrayList<>(Arrays.asList(scan.nextLine().split(",")));
-			dialogueOptions.put(categoryArray.remove(0).trim(), categoryArray);
-		}
-		scan.close();
-		return dialogueOptions;
+			file = new File(this.filePath);			
+		} catch(NullPointerException e) {
+			System.out.println("File "+this.filePath+" cannot be located!");
+			e.printStackTrace();
+			return;
+		} 
 	}
 	
-	default <T> T readJSON(String fileName) {
-		T t=null;
-		return t;
+	protected void startScanner() {
+		try {scan = new Scanner(file);}
+		catch (FileNotFoundException e) {
+			e.printStackTrace();
+			System.out.println("File "+this.filePath+" cannot be located!");
+		} 
 	}
-	
-	// this method returns a single instance of an object of generic type T based on 'objectName'
-	default <T> T getObject(String filename,String objectName) throws FileNotFoundException {
-		T t = null;
-		Scanner scan = new Scanner(new File(filename));  // Create a Scanner object
-		HashMap<String,ArrayList<String>> ObjectMap = new HashMap<>();	// String key hashmap of all dialogue options
-		
-		// creates an arraylist of stat titles and removes the first element.(it's not a stat title)
-		ArrayList<String> statTitles = new ArrayList<>(Arrays.asList(scan.nextLine().split(",")));
-		String ObjectType = statTitles.remove(0);
-		
-		while (scan.hasNext()) {
-			String key = scan.nextLine().split(",")[0];
-			if (key.equals(objectName)) {
-				
-			}	
+	protected void stopScanner() {
+		try {
+			scan.close();
+		} catch (IllegalStateException e) {
+			e.printStackTrace();
+			System.out.println("Scanner has already been closed!");
 		}
-		
-		return t;
 	}
+	public abstract T readline(int lineNumber);
+	public abstract T readline(String objectName);
+	public abstract <I,J> HashMap<I,J> readAll();
+
 }

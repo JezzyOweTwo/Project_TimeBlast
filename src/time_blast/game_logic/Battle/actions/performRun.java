@@ -16,6 +16,7 @@ public class performRun extends Action{
 	
 	@Override
 	public void execute() {
+		if (!areAlive()) return;
 		int sourceSpeed = source.getStat(StatName.SPEED);
 		int targetSpeed = target.getStat(StatName.SPEED);
 		String sourceName = source.getName();

@@ -2,9 +2,9 @@ package time_blast.game_logic.entities.attributes;
 import java.util.ArrayList;
 
 public class Inventory{
-	private ArrayList<Item> items;
-    private ArrayList<Spell> spells;
-    private ArrayList<Attack> attacks;
+	private ArrayList<Item> items = new ArrayList<>();
+    private ArrayList<Spell> spells= new ArrayList<>();
+    private ArrayList<Attack> attacks= new ArrayList<>();
     private int gold;
     
 	// creates an inventory with items
@@ -26,6 +26,7 @@ public class Inventory{
     	 attacks = (inv.getAttacks()!=null)?  new ArrayList<Attack>(inv.getAttacks()):null;
     }
     
+    public void addSpell(Spell spell) {spells.add(spell);}
     public Spell getSpell(int index) {return spells.get(index);}
     public Item getItem(int index) {return items.get(index);}
     public ArrayList<Item> getItems() {return items;}

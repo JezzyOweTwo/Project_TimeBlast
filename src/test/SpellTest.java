@@ -40,7 +40,7 @@ class SpellTest {
 	@Test
 	void copy_Constructor_RuntimeErrorTest_3() {
 		Spell spell1 = createSpellWithStats();;
-		Spell spell2 = new Spell (spell1);
+		new Spell (spell1);
 	}
 	
 	@Test

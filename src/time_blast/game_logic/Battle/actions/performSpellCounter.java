@@ -22,6 +22,7 @@ public class performSpellCounter extends Action{
 	
 	@Override
 	public void execute() {
+		if (!areAlive()) return;
 		SpellElement attackerSpellElement = sourceSpell.getSpell().getElement();
 		SpellElement defenderSpellElement = spell.getElement();
 		

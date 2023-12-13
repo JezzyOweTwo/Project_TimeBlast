@@ -22,8 +22,8 @@ import time_blast.game_logic.entities.attributes.Inventory;
 
 public abstract class Entity  {
 	
-    private Inventory inv;												  // inventory of entity 
-    private String name;						                          // name of entity
+    private Inventory inv = new Inventory();							  // inventory of entity 
+    private String name = new String ("");		                          // name of entity
     private final int ID;												  // ID Number of the entity	
     static int Count=0;													  // Number of created entities
     private HashMap<StatName,Integer> stats= new HashMap<>();	  		  // hashmap of stats				

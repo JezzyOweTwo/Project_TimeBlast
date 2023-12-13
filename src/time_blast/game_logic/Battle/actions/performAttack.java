@@ -11,6 +11,7 @@ public class performAttack extends Action{
 	
 	@Override
 	public void execute() {
+		if (!areAlive()) return;
 		int sourceAttack = source.getStat(StatName.ATK);
 		int sourceIQ = source.getStat(StatName.IQ);
 		int sourceSpeed  = source.getStat(StatName.SPEED);

@@ -4,18 +4,23 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import org.junit.jupiter.api.Test;
+
+import time_blast.file_reading.CSVReader;
+import time_blast.file_reading.Dialogue;
 import time_blast.file_reading.FileReader;
 import time_blast.game_logic.Battle.Battle;
 import time_blast.game_logic.entities.Enemy;
+import time_blast.game_logic.entities.Entity;
 import time_blast.game_logic.entities.Player;
+import time_blast.game_logic.entities.attributes.Item;
+import time_blast.game_logic.entities.attributes.Spell;
 
-class BattleTest implements FileReader{
+class BattleTest {
 	
 	public static ArrayList<Enemy> createEnemyArrayWithoutStats(){
 		ArrayList<Enemy> enemyarray = new ArrayList<>();
-		for (int i=0;i<3;i++) {
-			enemyarray.add(new Enemy());
-		}
+		for (int i=0;i<3;i++) 
+			enemyarray.add(new Enemy());	
 		return enemyarray;
 	}
 	
@@ -33,8 +38,10 @@ class BattleTest implements FileReader{
 	void Constructor_test_1() {
 		ArrayList<Enemy> enemyarray = createEnemyArrayWithStats();
 		Player player = EntityTest.createPlayerWithStats();
-		Battle battle = new Battle(player,enemyarray);
+		new Battle(player,enemyarray);
 	}
+	
+	// the battle constructor is not intended to deep copy. I know this test looks weird.
 	@Test
 	void Constructor_test_2() {
 		ArrayList<Enemy> enemyarray = createEnemyArrayWithStats();
@@ -44,6 +51,8 @@ class BattleTest implements FileReader{
 		boolean actual = player == battle.getPlayer();
 		assertEquals(actual,expected,"Player object was not shallowly copied!");
 	}
+	
+	// the battle constructor is not intended to deep copy.
 	@Test
 	void Constructor_test_3() {
 		ArrayList<Enemy> enemyarray = createEnemyArrayWithStats();
@@ -58,8 +67,9 @@ class BattleTest implements FileReader{
 		ArrayList<Enemy> enemyarray = createEnemyArrayWithStats();
 		Player player = EntityTest.createPlayerWithStats();
 		Battle battle = new Battle(player,enemyarray);
-		HashMap<String,ArrayList<String>> dialogue =
-				readCSV("\\src\\time_blast\\game_logic\\Battle\\BattleDialogue.csv");
+		
+		CSVReader<Dialogue> csvReader = new CSVReader("\\src\\time_blast\\game_logic\\Battle\\BattleDialogue.csv");
+		HashMap<String,Dialogue> dialogue = csvReader.readAll();
 		boolean expected = true;
 		boolean actual = dialogue != battle.getDialogue();
 		assertEquals(actual,expected,"Dialogue object was not deeply copied");
@@ -68,6 +78,9 @@ class BattleTest implements FileReader{
 	void Constructor_test_5() {
 		ArrayList<Enemy> enemyarray = createEnemyArrayWithStats();
 		Player player = EntityTest.createPlayerWithStats();
+		Spell spell = SpellTest.createSpellWithStats();
+		player.getInv().addSpell(spell);
+		player.getInv().addSpell(spell);
 		Battle battle = new Battle(player,enemyarray);
 		battle.runBattle();
 	}

@@ -22,11 +22,13 @@ public class performSpell extends Action{
 	
 	@Override
 	public void execute() {
+		if (!areAlive()) return;
 		int attackerIQ = source.getStat(StatName.IQ);
 		int defenderIQ = target.getStat(StatName.IQ);
 		int defenderDefence = target.getStat(StatName.DEF);
 		int damage = spell.getStat(SpellStatName.BASE_DAMAGE)+
 				     attackerIQ-defenderIQ-Math.max(defenderDefence/4,1);
+		damage = Math.max(damage, 1);
 		damage*=effectiveness;
 		target.dropStat(StatName.CURHP, damage);
 		source.dropStat(StatName.CURMP,spell.getStat(SpellStatName.MANA_COST));
