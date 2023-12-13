@@ -1,0 +1,12 @@
+Name,RarityRange,CURHP,MAXHP,CURMP,MAXMP,ATK,DEF,SPEED,IQ,LVL,AGGR,EXPYIELD,CUREXP,MAXEXP,isSplash,Description
+Health Potion,common@uncommon@rare@epic@legendary,5,0,0,0,0,0,0,0,0,0,0,0,0,false,A glass vial full of mysterious red liquid.
+Mana Potion,common@uncommon@rare@epic@legendary,0,0,5,0,0,0,0,0,0,0,0,0,0,false,A glass vial full of mysterious blue liquid.
+Chalice of Heart,rare@epic@legendary,5,5,0,0,0,0,0,0,0,0,0,0,0,false,A shining chalice that's filled to the brim.
+Wizard's Elixer,rare@epic@legendary,0,0,5,5,0,0,0,0,0,0,0,0,0,false,Or at least you think it belonged to a wizard...
+Experience Vial,common@uncommon@rare@epic@legendary,0,0,0,0,0,0,0,0,0,0,0,20,0,false,Knowledge beyond your years in contained in the bottle!
+Speed Potion,uncommon@rare@epic@legendary,0,0,0,0,0,0,6,0,0,0,0,0,0,false,You couldn't sleep for a week the last time you drank this one...
+Magic Book,rare@epic@legendary,0,0,0,0,0,0,0,6,0,0,0,0,0,false,I guess reading really does make you smarter!
+Rainbow Potion,epic@legendary,2,2,2,2,2,2,2,2,0,0,0,0,0,false,A vile-tasting concoction of various liquids... At least it works.
+Unstable Brew,legendary,0,-10,0,0,10,0,0,0,0,0,0,0,0,false,With great risk comes great rewards!
+Agressive Potion,legendary,3,3,0,0,3,3,0,0,0,4,2,0,0,true,THIS ONE MAKES EVERYONE SO MAD!!!!
+Secret Drug,legendary,50,50,50,50,50,50,50,50,0,0,0,0,0,false,Comes with a laundry lists of side effects in the coming years.

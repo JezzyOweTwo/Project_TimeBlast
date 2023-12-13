@@ -4,72 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca12709b-e71d-4c88-b0c1-aa559bf795c1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit5_main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project_TimeBlast.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/time_blast/file_reading/FileReadableTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/time_blast/file_reading/FileReaderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/time_blast/game_logic/actions/ActionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/time_blast/game_logic/battle/BattleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/time_blast/game_logic/entities/EntityTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/time_blast/game_logic/entities/attributes/SpellTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/time_blast/utilities/UtilitiesTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/test/ActionTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/test/BattleTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/test/EntityTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/test/FileReaderTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/test/FileReaderTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/test/SpellTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/test/UtilitiesTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/Main.class" afterDir="false" />
+    <list default="true" id="ca12709b-e71d-4c88-b0c1-aa559bf795c1" name="Changes" comment="Refactored test cases">
+      <change afterPath="$PROJECT_DIR$/src/test/time_blast/game_logic/entities/attributes/ItemTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/time_blast/game_logic/entities/attributes/AttributeRarity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/test/FileReaderTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/time_blast/file_reading/CSVReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/file_reading/CSVReader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/time_blast/file_reading/Dialogue.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/file_reading/Dialogue.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/time_blast/file_reading/FileReadable.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/file_reading/FileReadable.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/time_blast/file_reading/FileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/file_reading/FileReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/Battle/Battle.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/Battle/Battle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/Battle/actions/Action.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/Battle/actions/performAttack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/Battle/actions/performDefend.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/Battle/actions/performItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/Battle/actions/performRun.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/Battle/actions/performSpell.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/Battle/actions/performSpellCounter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/Enemy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/Entity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/StatName.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/StatName.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/Attack.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/Attack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/Inventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/Inventory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/Battle/BattleDialogue.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/Battle/BattleDialogue.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/RarityLevels.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/RarityLevels.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/Spell.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/Spell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/SpellElement.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/SpellElement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/SpellStatName.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/SpellStatName.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/graphics/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/graphics/GamePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/graphics/GameWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/graphics/GameWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/graphics/assets/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/graphics/assets/GUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/shop/Shop.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/shop/Shop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/utilities/ScrollingText.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/utilities/ScrollingText.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/utilities/Utilities.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/utilities/Utilities.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/ActionTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/BattleTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/EntityTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/FileReaderTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/SpellTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/UtilitiesTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/RarityLevels.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/time_blast/file_reading/FileReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/time_blast/file_reading/FileReaderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/time_blast/file_reading/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/file_reading/CSVReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/Battle/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/battle/Battle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/Battle/BattleDialogue.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/battle/BattleDialogue.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/Battle/actions/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/actions/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/Battle/actions/performAttack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/actions/performAttack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/Battle/actions/performDefend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/actions/performDefend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/Battle/actions/performItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/actions/performItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/Battle/actions/performRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/actions/performRun.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/Battle/actions/performSpell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/actions/performSpell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/Battle/actions/performSpellCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/actions/performSpellCounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/time_blast/file_reading/Dialogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/file_reading/Dialogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/time_blast/file_reading/FileReadable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/file_reading/FileReadable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/time_blast/file_reading/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/file_reading/FileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/battle/BattleDialogue.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/battle/BattleDialogue.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/entities/attributes/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/entities/attributes/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/entities/attributes/RarityLevels.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,11 +34,31 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="JezzyOweTwo &lt;fjeziah@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "JezzyOweTwo"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="a19365e1-333b-4bf6-8150-ef724f72299d" />
+        <option name="url" value="https://github.com/JezzyOweTwo/Project_TimeBlast.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -114,10 +88,10 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Program Files/Java/junit5-main",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
+    "settings.editor.selected.configurable": "preferences.fileTypes"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -131,8 +105,8 @@
       <recent name="time_blast" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="time_blast.utilities" />
       <recent name="time_blast.game_logic.entities.attributes" />
+      <recent name="time_blast.utilities" />
       <recent name="time_blast.game_logic.entities" />
       <recent name="time_blast.game_logic.actions" />
       <recent name="time_blast.game_logic.battle" />
@@ -147,6 +121,103 @@
       <option name="presentableId" value="Default" />
       <updated>1702453201561</updated>
     </task>
+    <task id="LOCAL-00001" summary="Refactored test cases">
+      <option name="closed" value="true" />
+      <created>1702457779344</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702457779344</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Refactored test cases">
+      <option name="closed" value="true" />
+      <created>1702457793413</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702457793413</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Refactored test cases">
+      <option name="closed" value="true" />
+      <created>1702457832708</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702457832708</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Refactored test cases">
+      <option name="closed" value="true" />
+      <created>1702457867691</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1702457867691</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Refactored test cases">
+      <option name="closed" value="true" />
+      <created>1702457909664</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702457909664</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Refactored test cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored test cases" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/time_blast/file_reading/FileReaderTest.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/time_blast/file_reading/FileReaderTest.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/time_blast/file_reading/CSVReader.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/time_blast/file_reading/CSVReader.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/time_blast/file_reading/CSVReader.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/time_blast/file_reading/CSVReader.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="((CSVReader)this).scan" custom="time_blast.file_reading.CSVReader" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
