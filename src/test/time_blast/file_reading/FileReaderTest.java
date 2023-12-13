@@ -1,4 +1,4 @@
-package test;
+package time_blast.file_reading;
 import java.util.HashMap;
 import org.junit.jupiter.api.Test;
 import time_blast.file_reading.CSVReader;
