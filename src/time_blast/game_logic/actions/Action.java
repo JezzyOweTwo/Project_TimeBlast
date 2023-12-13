@@ -1,4 +1,4 @@
-package time_blast.game_logic.Battle.actions;
+package time_blast.game_logic.actions;
 import time_blast.game_logic.entities.Entity;
 import time_blast.game_logic.entities.StatName;
 
@@ -18,9 +18,8 @@ public abstract class Action implements Comparable<Action>{
 	
 	// checks if source and target are both still alive.
 	protected boolean areAlive() {
-		if (source.getStat(StatName.CURHP)<=0||target.getStat(StatName.CURHP)<=0) return false;
-		else return true;
-	}
+        return source.getStat(StatName.CURHP) > 0 && target.getStat(StatName.CURHP) > 0;
+    }
 	
 	// getters
 	public Entity getSource() {return source;}

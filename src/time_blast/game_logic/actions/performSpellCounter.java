@@ -1,4 +1,4 @@
-package time_blast.game_logic.Battle.actions;
+package time_blast.game_logic.actions;
 import time_blast.game_logic.entities.StatName;
 import time_blast.game_logic.entities.attributes.Spell;
 import time_blast.game_logic.entities.attributes.SpellElement;

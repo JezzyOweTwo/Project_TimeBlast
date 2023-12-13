@@ -1,14 +1,14 @@
-package time_blast.game_logic.Battle;
+package time_blast.game_logic.battle;
 import java.util.*;
 
 import time_blast.file_reading.CSVReader;
 import time_blast.file_reading.Dialogue;
-import time_blast.game_logic.Battle.actions.Action;
-import time_blast.game_logic.Battle.actions.performAttack;
-import time_blast.game_logic.Battle.actions.performDefend;
-import time_blast.game_logic.Battle.actions.performItem;
-import time_blast.game_logic.Battle.actions.performRun;
-import time_blast.game_logic.Battle.actions.performSpell;
+import time_blast.game_logic.actions.Action;
+import time_blast.game_logic.actions.performAttack;
+import time_blast.game_logic.actions.performItem;
+import time_blast.game_logic.actions.performRun;
+import time_blast.game_logic.actions.performDefend;
+import time_blast.game_logic.actions.performSpell;
 import time_blast.game_logic.entities.*;
 import time_blast.utilities.Utilities;
 

@@ -1,4 +1,4 @@
-package time_blast.game_logic.Battle.actions;
+package time_blast.game_logic.actions;
 
 import time_blast.game_logic.entities.Entity;
 import time_blast.game_logic.entities.StatName;

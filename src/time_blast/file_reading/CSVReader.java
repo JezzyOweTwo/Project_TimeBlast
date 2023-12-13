@@ -23,18 +23,17 @@ public class CSVReader<T extends FileReadable<T>> extends FileReader<T>{
 		startScanner();
 		String key;
 		T value;
-		HashMap<String,T> allDialogue = new HashMap<>();
-		int i=1;	// starts from the second line because first line is category headers
-		while (scan.hasNext()){
+		HashMap<String, T> allDialogue = new HashMap<>();
+		int i = 1;    // starts from the second line because first line is category headers
+		while (scan.hasNext()) {
 			key = new ArrayList<>(Arrays.asList(scan.nextLine().split(","))).get(0).strip();
 			value = readline(i);
-			allDialogue.put(key,value);
+			allDialogue.put(key, value);
 			i++;
 		}
 		stopScanner();
 		return allDialogue;
 	}
-	
 	@Override
 	public T readline(int lineNumber) {
 		startScanner();
