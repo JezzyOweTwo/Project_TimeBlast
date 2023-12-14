@@ -14,19 +14,19 @@ import time_blast.utilities.Utilities;
 
 // This class is responsible for the battling in the game.
 public class Battle implements Utilities {
-	private Player player;
-	private ArrayList<Enemy> enemies;
-	private ArrayList<Entity> combattants;
-	private HashMap<String,Dialogue> dialogue;
-	private final String DIALOGUE_PATH ="\\src\\time_blast\\game_logic\\Battle\\BattleDialogue.csv";
-	
+	private final Player player;
+	private final ArrayList<Enemy> enemies;
+	private final ArrayList<Entity> combattants;
+	private final HashMap<String,Dialogue> dialogue;
+
 	public Battle(Player player, ArrayList<Enemy> enemies){
-		
+
 		// note that this constructor intentionally avoids deep copying
 		this.player=player;
 		this.enemies=enemies;
 		combattants = new ArrayList<>(enemies);
 		combattants.add(player);
+		String DIALOGUE_PATH = "\\src\\time_blast\\game_logic\\Battle\\BattleDialogue.csv";
 		dialogue = new CSVReader<Dialogue>(DIALOGUE_PATH).readAll();
 	}
 	
@@ -109,7 +109,7 @@ public class Battle implements Utilities {
 				return 1;
 			}
 			
-			if (deadEnemies.size()>0) {
+			if (!deadEnemies.isEmpty()) {
 				combattants.removeAll(deadEnemies);
 				enemies.removeAll(deadEnemies);		
 			}
@@ -119,14 +119,13 @@ public class Battle implements Utilities {
 	
 	// controls enemy logic
 	private Action enemyInputHandler(Enemy e) {
-		Action enemychoice = new performAttack(e,player); // for now, all enemies just basic attack
-		return enemychoice;
+		return new performAttack(e,player); // for now, all enemies just basic attack
 	}
 	
 	// this method gets the player's input and returns the corresponding action
 	private Action playerInputHandler() {
 		
-		int playerchoice = response(dialogue.get("Menu").get(0).toString());
+		int playerchoice = response(dialogue.get("Menu").get(0));
 		int playerchoice2;
 		Action playerAction = null;
 		
@@ -146,7 +145,7 @@ public class Battle implements Utilities {
 			
 			// spell option
 			case 3:
-				if (player.getInv().getSpells().size()==0) break;
+				if (player.getInv().getSpells().isEmpty()) break;
 				playerchoice = response(dialogue.get("Targeters").get(2),player.getInv().getSpells());
 				playerchoice2 = response(dialogue.get("Targeters").get(0),enemies);
 				playerAction = new performSpell(player,enemies.get(playerchoice2-1),player.getInv().getSpell(playerchoice-1));
@@ -154,7 +153,7 @@ public class Battle implements Utilities {
 			
 			// item option
 			case 4:
-				if (player.getInv().getItems().size()==0) break;
+				if (player.getInv().getItems().isEmpty()) break;
 				playerchoice = response(dialogue.get("Targeters").get(1),player.getInv().getItems());
 				playerchoice2 = response(dialogue.get("Targeters").get(0),enemies);
 				playerAction = new performItem(player,enemies.get(playerchoice2-1),player.getInv().getItem(playerchoice-1));

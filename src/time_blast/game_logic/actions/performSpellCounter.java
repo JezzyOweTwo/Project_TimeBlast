@@ -5,8 +5,8 @@ import time_blast.game_logic.entities.attributes.SpellElement;
 import time_blast.game_logic.entities.attributes.SpellStatName;
 
 public class performSpellCounter extends Action{
-	private Spell spell;
-	private performSpell sourceSpell;
+	private final Spell spell;
+	private final performSpell sourceSpell;
 	
 	public Spell getSpell(){return spell;}
 	public performSpell getSourceSpell(){return sourceSpell;}

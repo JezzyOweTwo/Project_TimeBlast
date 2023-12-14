@@ -41,7 +41,7 @@ public class CSVReader<T extends FileReadable<T>> extends FileReader<T>{
 	}
 
 	private T generateObject(ArrayList<String> values) {
-		T t= (T)(new Item());
+		T t= (T)(new Dialogue());
 		return t.create(values);
 	}
 	@Override

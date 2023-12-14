@@ -1,18 +1,21 @@
-package time_blast.game_logic.entities;	
+package time_blast.game_logic.entities;
+import java.nio.file.Paths;
 import java.util.HashMap;
 
 import time_blast.game_logic.entities.attributes.Inventory;
+import time_blast.graphics.assets.Direction;
 
 //player subclass
 public class Player extends Entity{	
 	private final StatName[] REJECTED_STATS = {StatName.EXPYIELD,StatName.AGGR};
 	
 	public Player(HashMap<StatName,Integer> stats,Inventory inv,String name){
-	 	super(inv,name);
-	 	this.statLoader(stats);
-	 	this.removeStats(REJECTED_STATS);
+		 super(inv,name);
+		 this.statLoader(stats);
+		 this.imageLoader(Paths.get("").toAbsolutePath().toString()+"\\src\\time_blast\\game_logic\\entities\\player.png");
+		 this.removeStats(REJECTED_STATS);
 	}
-	
+
 	 // copy constructor
 	 public Player(Player player){
 	 	super(player);
@@ -22,6 +25,7 @@ public class Player extends Entity{
 	 
 	 public Player(){
 	 	super();
+		this.imageLoader(Paths.get("").toAbsolutePath().toString()+"\\src\\time_blast\\game_logic\\entities\\player.png");
 	 }
 	
 	public void xpGain(int EXPGain){

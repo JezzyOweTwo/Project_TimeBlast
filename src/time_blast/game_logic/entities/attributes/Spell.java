@@ -1,4 +1,7 @@
 package time_blast.game_logic.entities.attributes;
+import time_blast.graphics.RollOverArrayList;
+
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class Spell{
@@ -37,10 +40,9 @@ public class Spell{
 	// generates the element effectiveness chart 
 	private static HashMap<SpellElement,SpellElement> elementChartGenerator(){
 		HashMap<SpellElement,SpellElement> elementChart = new HashMap<>();
-		SpellElement[] spellElements = SpellElement.values();
-		int spellElementCount = spellElements.length;
-		for (int j =1;j<=spellElementCount;j++) 
-			elementChart.put(spellElements[(j-1)%spellElementCount], spellElements[(j)%spellElementCount]);
+		RollOverArrayList<SpellElement> spellElements = new RollOverArrayList<>(Arrays.asList(SpellElement.values()));
+		for (int j =1;j<=spellElements.size();j++)
+			elementChart.put(spellElements.get(j-1), spellElements.get(j));
 		return elementChart;
 	}
     
