@@ -5,54 +5,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca12709b-e71d-4c88-b0c1-aa559bf795c1" name="Changes" comment="Added RollOverArrayList.java, reworked Spell Constructor, added several animation and movement interfaces, added Gamepad.java, and added lots of JPanel stuff.">
-      <change afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/player.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/time_blast/graphics/Animatable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/time_blast/graphics/AnimationHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/time_blast/graphics/Drawable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/time_blast/graphics/GameState.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/time_blast/graphics/Moveable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/time_blast/graphics/OverworldPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/time_blast/graphics/RollOverArrayList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/time_blast/graphics/StateHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/time_blast/graphics/assets/Direction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/time_blast/utilities/DefaultBinds.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/time_blast/utilities/Gamepad.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/time_blast/utilities/Key.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/time_blast/game_logic/entities/player.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/time_blast/graphics/Animatable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/time_blast/graphics/AnimationHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/time_blast/graphics/Drawable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/time_blast/graphics/GameState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/time_blast/graphics/Moveable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/time_blast/graphics/OverworldPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/time_blast/graphics/RollOverArrayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/time_blast/graphics/StateHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/time_blast/graphics/assets/Direction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/time_blast/utilities/DefaultBinds.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/time_blast/utilities/Gamepad.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/time_blast/utilities/Key.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit5_main1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/file_reading/CSVReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/file_reading/CSVReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/file_reading/Dialogue.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/file_reading/Dialogue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/Battle/Battle.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/Battle/Battle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/actions/performSpellCounter.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/actions/performSpellCounter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/Entity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/Spell.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/Spell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/graphics/GamePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/graphics/GamePanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/time_blast/graphics/GameWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/time_blast/graphics/GameWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/time_blast/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project_TimeBlast.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Project_TimeBlast.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/file_reading/CSVReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/file_reading/Dialogue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/file_reading/FileReadable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/file_reading/FileReadableTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/file_reading/FileReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/file_reading/FileReaderTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/Battle/Battle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/Battle/BattleTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/actions/Action.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/actions/ActionTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/actions/performAttack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/actions/performDefend.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/actions/performItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/actions/performRun.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/actions/performSpell.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/actions/performSpellCounter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/Enemy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/Entity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/EntityTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/Player.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/StatName.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/Attack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/AttributeRarity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/Inventory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/Item.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/ItemTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/Spell.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/SpellElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/SpellStatName.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/game_logic/entities/attributes/SpellTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/graphics/Animatable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/graphics/AnimationHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/graphics/Drawable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/graphics/GamePanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/graphics/GameState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/graphics/GameWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/graphics/Moveable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/graphics/OverworldPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/graphics/RollOverArrayList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/graphics/StateHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/graphics/assets/Direction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/graphics/assets/GUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/shop/Shop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/utilities/DefaultBinds.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/utilities/Gamepad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/utilities/Key.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/utilities/ScrollingText.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/utilities/Utilities.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/time_blast/utilities/UtilitiesTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/time_blast/file_reading/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/file_reading/CSVReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/time_blast/file_reading/Dialogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/file_reading/Dialogue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/actions/performSpellCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/actions/performSpellCounter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/battle/Battle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/battle/Battle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/entities/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/entities/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/entities/attributes/Spell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/entities/attributes/Spell.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/time_blast/graphics/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/graphics/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/time_blast/graphics/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/graphics/GameWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/time_blast/file_reading/FileReadable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/time_blast/file_reading/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/file_reading/FileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/time_blast/game_logic/entities/attributes/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/time_blast/game_logic/entities/attributes/Item.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,36 +100,38 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2ZTjrpeR5LoEWEKyW3yoirB3Iwj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/Java/junit5-main&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Program Files/Java/junit5-main",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -137,6 +149,13 @@
       <recent name="time_blast.game_logic.actions" />
       <recent name="time_blast.game_logic.battle" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-18.0.2-corretto-18.0.2-249ae16d76d6-e0389a16" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

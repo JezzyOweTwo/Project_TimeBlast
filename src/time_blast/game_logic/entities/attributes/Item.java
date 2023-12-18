@@ -1,12 +1,12 @@
 package time_blast.game_logic.entities.attributes;
 import java.util.*;
 
-import time_blast.file_reading.FileReadable;
+import time_blast.file_reading.FileReader;
 import time_blast.game_logic.entities.StatName;
 
-public class Item implements FileReadable<Item>{
+public class Item {
     private HashMap<StatName,Integer> stats;
-    String description;
+    private String description;
     private AttributeRarity rarity;
     private boolean isSplash;
     static int count=1;
@@ -22,7 +22,26 @@ public class Item implements FileReadable<Item>{
         ID=count;
         count++;
     } 
-    
+
+    public Item(FileReader fileReader,int fileLine){
+        this();
+        ArrayList<String> itemFields = fileReader.readline(fileLine);
+        name = (itemFields.get(0));
+        // rarity  itemFields.get(1);
+
+        // starts from the third value because name and rarity are in cells 0 & 1 respectively.
+        int i = 2;
+        int statValue;
+        for (StatName stat: StatName.values()){
+            statValue = Integer.parseInt(itemFields.get(i));
+            if (statValue==0) continue;
+            this.setStat(stat,statValue);
+            i++;
+        }
+        this.setIsSplash(Boolean.parseBoolean(itemFields.get(itemFields.size()-2)));
+        this.setDescription(itemFields.get(itemFields.size()-1));
+    }
+
     public Item(){
         ID=count;
         count++;
@@ -55,25 +74,4 @@ public class Item implements FileReadable<Item>{
     public static int getCount() {return count;}
     public int getID() {return ID;}
 
-	@Override
-	public Item create(Object value) {
-        ArrayList<String> itemFields = (ArrayList<String>) value;
-        Item item = new Item();
-
-        item.setName(itemFields.get(0));
-       // rarity  itemFields.get(1);
-
-        // starts from the third value because name and rarity are in cells 0 & 1 respectively.
-        int i = 2;
-        for (StatName stat: StatName.values()){
-            int statValue = Integer.parseInt(itemFields.get(i));
-            if (statValue==0) continue;
-            item.setStat(stat,statValue);
-            i++;
-        }
-
-        item.setIsSplash(Boolean.parseBoolean(itemFields.get(itemFields.size()-2)));
-        item.setDescription(itemFields.get(itemFields.size()-1));
-		return item;
-	}
 }
